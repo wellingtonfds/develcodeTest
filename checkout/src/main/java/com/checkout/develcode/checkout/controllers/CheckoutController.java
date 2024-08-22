@@ -6,9 +6,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
+
 import com.checkout.develcode.checkout.Checkout;
+import com.checkout.develcode.checkout.CheckoutStatusEnum;
 import com.checkout.develcode.checkout.dtos.CreateCheckoutDto;
 import com.checkout.develcode.checkout.services.CheckoutService;
+
 import jakarta.validation.Valid;
 
 @RestController
@@ -27,6 +30,9 @@ public class CheckoutController implements CheckoutApi {
         var checkout = checkoutService.create(createCheckout);
         var uri = uriComponentsBuilder.path("/api/checkouts/{id}").buildAndExpand(checkout.getId())
                 .toUri();
+        if (checkout.getStatusEnum() != CheckoutStatusEnum.COMPLETED) {
+            return ResponseEntity.badRequest().body(checkout);
+        }
         return ResponseEntity.created(uri).body(checkout);
     }
 
