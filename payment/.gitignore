@@ -145,3 +145,5 @@ dist
 
 ### VS Code ###
 .vscode/
+
+pnpm-lock.yaml
