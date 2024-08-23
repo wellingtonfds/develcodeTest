@@ -10,7 +10,7 @@ import com.checkout.develcode.checkout.CheckoutStatusEnum;
 import com.checkout.develcode.checkout.converters.CheckoutConverter;
 import com.checkout.develcode.checkout.dtos.CreateCheckoutDto;
 import com.checkout.develcode.checkout.repositories.CheckoutRepository;
-import com.checkout.develcode.expections.CustomFeignException;
+import com.checkout.develcode.exceptions.CustomFeignException;
 import com.checkout.develcode.payment.PaymentService;
 import com.checkout.develcode.payment.dtos.RequestPaymentValidateDto;
 

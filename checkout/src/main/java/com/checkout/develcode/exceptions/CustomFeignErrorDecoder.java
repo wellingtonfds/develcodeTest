@@ -1,4 +1,4 @@
-package com.checkout.develcode.expections;
+package com.checkout.develcode.exceptions;
 
 import feign.Response;
 import feign.codec.ErrorDecoder;

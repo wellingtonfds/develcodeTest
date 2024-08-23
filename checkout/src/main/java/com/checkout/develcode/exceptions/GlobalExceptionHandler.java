@@ -1,8 +1,5 @@
-package com.checkout.develcode.expections;
+package com.checkout.develcode.exceptions;
 
-
-import io.swagger.v3.oas.annotations.Hidden;
-import jakarta.persistence.EntityNotFoundException;
 
 import java.util.List;
 
@@ -14,8 +11,11 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.checkout.develcode.expections.converters.FieldErrorConverter;
-import com.checkout.develcode.expections.dtos.ValidateErrosDataDto;
+import com.checkout.develcode.exceptions.converters.FieldErrorConverter;
+import com.checkout.develcode.exceptions.dtos.ValidateErrosDataDto;
+
+import io.swagger.v3.oas.annotations.Hidden;
+import jakarta.persistence.EntityNotFoundException;
 
 
 

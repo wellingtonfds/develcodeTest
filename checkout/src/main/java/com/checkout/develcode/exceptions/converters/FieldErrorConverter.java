@@ -1,8 +1,8 @@
-package com.checkout.develcode.expections.converters;
+package com.checkout.develcode.exceptions.converters;
 
 import org.springframework.validation.FieldError;
 
-import com.checkout.develcode.expections.dtos.ValidateErrosDataDto;
+import com.checkout.develcode.exceptions.dtos.ValidateErrosDataDto;
 
 
 public class FieldErrorConverter {

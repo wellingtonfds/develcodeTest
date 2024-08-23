@@ -1,4 +1,4 @@
-package com.checkout.develcode.expections;
+package com.checkout.develcode.exceptions;
 
 public class CustomFeignException extends RuntimeException {
 
