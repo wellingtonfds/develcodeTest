@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.checkout.develcode.payment.dtos.PaymentValidationResponseDto;
 import com.checkout.develcode.payment.dtos.RequestPaymentValidateDto;
 
-@FeignClient(name = "external-payment-service", url = "http://payment_service:3000/payment")
+@FeignClient(name = "external-payment-service", url = "${external.payment-service.url}")
 public interface PaymentFeignClient {
 
     @PostMapping("/validate")
